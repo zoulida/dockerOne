@@ -62,33 +62,33 @@ def SVR_train(*data):
     # Create the (parametrised) models
     # print("Hit Rates/Confusion Matrices:\n")
     models = [
-        # (
-        #     "model_DecisionTreeRegressor", model_DecisionTreeRegressor
-        # ),
-        # (
-        #     "model_LinearRegression", model_LinearRegression
-        # ),
+        (
+            "model_DecisionTreeRegressor", model_DecisionTreeRegressor
+        ),
+        (
+            "model_LinearRegression", model_LinearRegression
+        ),
         (
             "model_SVR", model_SVR2#model_SVR
         ),
-        # (
-        #     "model_KNeighborsRegressor", model_KNeighborsRegressor
-        # ),
-        # (
-        #     "model_RandomForestRegressor", model_RandomForestRegressor
-        # ),
-        # (
-        #     "model_AdaBoostRegressor", model_AdaBoostRegressor
-        # ),
-        # (
-        #     "model_GradientBoostingRegressor", model_GradientBoostingRegressor
-        # ),
-        # (
-        #     "model_BaggingRegressor", model_BaggingRegressor
-        # ),
-        # (
-        #     "model_ExtraTreeRegressor", model_ExtraTreeRegressor
-        # )
+        (
+            "model_KNeighborsRegressor", model_KNeighborsRegressor
+        ),
+        (
+            "model_RandomForestRegressor", model_RandomForestRegressor
+        ),
+        (
+            "model_AdaBoostRegressor", model_AdaBoostRegressor
+        ),
+        (
+            "model_GradientBoostingRegressor", model_GradientBoostingRegressor
+        ),
+        (
+            "model_BaggingRegressor", model_BaggingRegressor
+        ),
+        (
+            "model_ExtraTreeRegressor", model_ExtraTreeRegressor
+        )
     ]
 
     for m in models:
@@ -131,7 +131,7 @@ def SVR_train(*data):
             print('r2: ', r2)
 
             endtime = datetime.datetime.now()
-            print('训练，预测耗费时间，单位秒：', (endtime - starttime).seconds)
+            print('%s训练，预测耗费时间，单位秒：'%m[0], (endtime - starttime).seconds)
 
             #result = m[1].predict(X_test)
             import matplotlib.pyplot as plt
