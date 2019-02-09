@@ -15,8 +15,8 @@ except ImportError:
 import numpy as np
 import pandas as pd
 
-from event import FillEvent, OrderEvent
-from performance import create_sharpe_ratio, create_drawdowns
+from .event import FillEvent, OrderEvent
+from .performance import create_sharpe_ratio, create_drawdowns
 
 
 class Portfolio(object):
